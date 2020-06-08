@@ -1,0 +1,10 @@
+input{
+    height:35px;
+    font-size: large;
+    padding-left:10px;
+    border: 1px solid #beb9b9;
+    border-radius: 5px;
+    &:focus{
+        border: 1px solid #437fe6;
+    }
+}

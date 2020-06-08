@@ -1,0 +1,42 @@
+
+.btn{
+    padding:10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+//3 type of button
+.add{
+    background-color:#437fe6;
+    &:hover{
+        background-color:#2f6eda;
+    }
+    &:active{
+        background-color: #2b62c2;
+    }
+    
+}
+
+.modify{
+    background-color:#43e65e;
+    &:hover{
+        background-color:#3ed357;
+    }
+    &:active{
+        background-color: #37c24e;
+    }
+}
+
+.delete{
+    background-color: #e64d43;
+    &:hover{
+        background-color:#ca4036;
+    }
+    &:active{
+        background-color: #8b3029;
+    }
+}

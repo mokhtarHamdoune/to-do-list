@@ -1,0 +1,27 @@
+.row{
+    display: flex;
+    min-height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    .toDoContent{
+        width: 70%;
+        padding:3px 10px;
+        background-color: #fff;
+        border: 1px solid #4985a1;
+        border-radius: 5px;
+    }
+    .buttons{
+        width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 5px;
+        .btn{
+            margin: 1px;
+        }
+    }
+}
