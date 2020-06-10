@@ -1,9 +1,10 @@
 import React from 'react';
 import './form_input.style.scss';
-
-const FormInput = ({type,placeholder})=>{
+//mettre le rest des parametre dans un array s'appel rest
+const FormInput = ({handleChange,...rest})=>{
+    //detruire le array en elemments
     return (
-            <input type={type} placeholder={placeholder}/>
+            <input {...rest} onChange={handleChange}/>
     );
 }
 

@@ -3,15 +3,25 @@ import Button from '../buttons/button.component';
 import './row.style.scss';
 
 class Row extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            newContent:''
+        }
+    }
+    handleClick=(index,role)=>{
+        role === 'delete' ? this.props.removeFromList(index) : console.log("modify")
+    }
     render(){
+        const {row}  = this.props;
         return(
             <div className='row'>
                 <div className='toDoContent'>
-                    What should I do What should I do What should I do What should I do What should I do What should I do What should I do
+                    {row.content}
                 </div>
                 <div className="buttons">
-                    <Button role='modify'>Modify</Button>
-                    <Button role='delete'>Delete</Button>
+                    <Button role='modify' handleClick={()=>this.handleClick(row.id,'modify')}>Modify</Button>
+                    <Button role='delete' handleClick={()=>this.handleClick(row.id,'delete')}>Delete</Button>
                 </div>
             </div>
         );

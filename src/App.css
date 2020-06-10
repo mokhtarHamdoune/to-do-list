@@ -1,7 +1,11 @@
 .container{
-  width: 50%;
+  width: 55%;
   min-width:400px;
   margin: auto;
   margin-top: 50px;
- 
+  border: 2px solid black;
+  background-color:#cbe8ff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px black;
+  padding:2%;
 }
