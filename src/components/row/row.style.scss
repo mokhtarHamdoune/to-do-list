@@ -15,6 +15,12 @@
         background-color: #fff;
         border: 1px solid #4985a1;
         border-radius: 5px;
+        textarea{
+            width: 100%;
+            resize: none;
+            border: none;
+            font-size: 1em;
+        }
     }
     .buttons{
         width: 25%;

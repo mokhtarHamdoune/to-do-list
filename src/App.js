@@ -18,7 +18,7 @@ class App extends Component{
   removeFromList=(index)=>{
     this.setState({list:this.state.list.filter(ele=>ele.id!==index)})
   }
-
+  
   render(){
     return(
       <div className='container'>
