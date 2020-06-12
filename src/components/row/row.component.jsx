@@ -7,16 +7,18 @@ class Row extends Component{
         super(props);
         this.state={
             ...this.props.row,
-            hasMdodify:false
+            hasToModify:false
         }
+
     }
     handleClick=(index,role)=>{
         if(role === 'delete' ) {
             this.props.removeFromList(index); 
         }else if(role==='modify') {
-            this.setState({hasMdodify:true});
+            this.setState({hasToModify:true});
         }else{
-           this.setState({hasMdodify:false});
+            this.setState({hasToModify:false});
+            this.props.handleModify(this.state);
         }
     }
 
@@ -29,12 +31,12 @@ class Row extends Component{
             <div className='row'>
                 <div className='toDoContent'>
                    {
-                     (!row.hasMdodify) ? row.content : 
+                     (!row.hasToModify) ? row.content: 
                      <textarea name="row-content"  value={row.content} onChange={this.handleChange} />  
                    }
                 </div>
                 <div className="buttons">
-                    <Button role='modify' handleClick={()=>this.handleClick(row.id,this.state.hasMdodify ? 'save' :'modify')}>{this.state.hasMdodify ? 'Save' :'Modify'}</Button>
+                    <Button role='modify' handleClick={()=>this.handleClick(row.id,row.hasToModify ? 'save' :'modify')}>{row.hasToModify ? 'Save' :'Modify'}</Button>
                     <Button role='delete' handleClick={()=>this.handleClick(row.id,'delete')}>Delete</Button>
                 </div>
             </div>

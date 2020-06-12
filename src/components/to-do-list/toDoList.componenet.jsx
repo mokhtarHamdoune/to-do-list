@@ -13,7 +13,7 @@ class ToDoList extends Component{
                     </div>
                     <div className='tbody'>
                         {
-                            rows.map((row,index)=><Row key={index} row={row} removeFromList={this.props.removeFromList}/>)
+                            rows.map((row,index)=><Row key={row.id} row={row} removeFromList={this.props.removeFromList} handleModify={this.props.handleModify}/>)
                         }
                     </div>
                 </div>
