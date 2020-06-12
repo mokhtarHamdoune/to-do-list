@@ -8,7 +8,6 @@ class Form extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            search:'',
             content:''
         }
         this.handleChange=this.handleChange.bind(this);
@@ -25,10 +24,9 @@ class Form extends React.Component{
     }
 
     render(){
-        const{search,content}=this.state;
+        const{content}=this.state;
         return(
             <form>
-                <FormInput type='search' placeholder='Chercher dans la list' name='search'  value={search} handleChange={this.handleChange} />
                 <div className='add-to-list'>
                     <FormInput type='text' name='content' value={content} placeholder='Ajouter dans la list' handleChange={this.handleChange} />
                     <Button role='add' handleClick={this.handleClick} >Save</Button>

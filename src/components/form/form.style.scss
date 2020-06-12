@@ -1,13 +1,10 @@
 form{
-    width:90%;
-    height: 90px;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: auto;
-    input{
-        width: 100%;
-    }
+    
     .add-to-list{
         display: flex;
         input{

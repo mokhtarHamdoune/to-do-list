@@ -8,4 +8,16 @@
   border-radius: 10px;
   box-shadow: 2px 2px 15px black;
   padding:2%;
+  
+}
+.container input{
+  height:45px;
+}
+
+.container .search-save{
+  height: 120px;
+  padding:10px 40px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
