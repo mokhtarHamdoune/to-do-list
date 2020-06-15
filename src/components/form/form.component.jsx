@@ -19,6 +19,10 @@ class Form extends React.Component{
     }
 
     handleClick=()=>{
+        if(this.state.content===''){
+            alert("la tâche ne doit pas être vide");
+            return;
+        }
         this.props.handleSubmit(this.state);
         this.setState({content:''});
     }
